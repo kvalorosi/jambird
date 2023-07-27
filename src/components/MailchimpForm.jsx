@@ -1,3 +1,4 @@
+import '../components/comp_css/chimp.css'
 
 const MailchimpForm = () => {
     return (
@@ -6,7 +7,7 @@ const MailchimpForm = () => {
         <div id="mc_embed_signup">
           <form action="https://yahoo.us11.list-manage.com/subscribe/post?u=9dc2309eb61183021eb1c2cd4&amp;id=9b9ecc4698&amp;f_id=0017aae0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
             <div id="mc_embed_signup_scroll">
-              <h2>Subscribe</h2>
+              <h2>Click subscribe below for the lastest happenings at Jam bird!</h2>
               <p className="brandingLogo" style={{ margin: '0px auto' }}><img src="images/color_noback Small.jpeg"  /></p>
               {/* <div className="indicates-required"><span className="asterisk">*</span> indicates required</div> */}
               {/* <div className="mc-field-group">
@@ -17,11 +18,9 @@ const MailchimpForm = () => {
                 <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
                 <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
               </div>
-              <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-            
-              </div>
-              <div className="optionalParent">
-                <div className="clear foot">
+              <br />
+              <div className="optionalParent justify-content-center">
+                <div className="clear_foot">
                   <input type="submit" name="subscribe" id="mc-embedded-subscribe" className="button" value="Subscribe" />
                 </div>
               </div>

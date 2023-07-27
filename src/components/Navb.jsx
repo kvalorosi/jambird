@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Navb = () => {
     return (
-        <Navbar bg="light" data-bs-theme="light">
+        <Navbar style={{ backgroundColor: "#e6f7ff" }} >
         <Container>
         <Navbar.Brand className="home" href="#home"></Navbar.Brand>
           <Nav className="me-auto">
