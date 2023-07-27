@@ -17,8 +17,8 @@ function App() {
     <Navb />
     <Routes>
     <Route children path='/' element={<Home />} />
-    <Route children path='/order' elemnt={<Order />} />
-    <Route children path='/about' elemnt={<About />} />
+    <Route children path='/order' element={<Order />} />
+    <Route children path='/about' element={<About />} />
 
     </Routes>
 

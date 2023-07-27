@@ -18,18 +18,7 @@ const Navb = () => {
           </Nav>
         </Container>
       </Navbar>
-
-
-
-
-
-
-
-
-
-       
-
-    )
+  )
 }
 export default Navb;
 
