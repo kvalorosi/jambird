@@ -13,7 +13,7 @@ const About = () => {
   };
   return (
     <>
-    <div className="content-container">
+    <div className="content-container w-75 m-auto">
    <Card className="card-custom" style={{ backgroundColor: "#e6f7ff"}}>
       <Card.Body>
 
