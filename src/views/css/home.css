@@ -9,9 +9,21 @@ h2{
 body {
   margin: 0;
   padding: 0;
-  background-image: url('images/IMG_7280.jpeg');
+  /* background-image: url('images/IMG_7280.jpeg'); */
   background-size: cover;
   font-family: 'Courier New', Courier, monospace;
+  }
+  .logo {
+    background-image: url('/Users/kaytlinvalorosi/Documents/JamBird React/jambird/images/white_logo.png');
+    background-size: cover;
+
+
+  }
+
+  .bike-pic {
+    background-image: url('images/IMG_7280.jpeg');
+    background-size: cover;
+
   }
   
   .hero-container {
