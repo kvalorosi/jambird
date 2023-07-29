@@ -12,8 +12,9 @@ const About = () => {
     setSubscribed(true);
   };
   return (
-    <>
     <div className="bike-pic">
+    <>
+    
     <div className="content-container w-75 m-auto">
    <Card className="card-custom" style={{ backgroundColor: "#e6f7ff"}}>
       <Card.Body>
@@ -40,12 +41,14 @@ Briana
       <div className="content-container">
         {!subscribed && <MailchimpForm onSubscribe={handleSubscribe} />}
       </div>
-      </div>
+      
 
 
 
 
     </>
+    </div>
+
   )
 };
 

@@ -7,9 +7,10 @@ import '../views/css/home.css';
 
 const Home = () => {
    return (
+    <div className="logo">
         <>
-            <h2><em>Jam Bird is live And ready to go for a ride</em></h2>
-            <div className="logo">
+            <h2><em>Jam Bird is live and ready to go for a ride</em></h2>
+            
 
                 <div className="hero-container">
                     <Carousel>
@@ -38,10 +39,11 @@ const Home = () => {
 
                     </div>
                 </div>
-            </div>
+            
 
 
         </>
+        </div>
 
 
 
