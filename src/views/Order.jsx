@@ -1,76 +1,65 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { ListGroup } from "react-bootstrap";
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
 const Order = () => {
-    useEffect(() => { console.log('SHOP component state has been rendered or re-rendered') });
+  useEffect(() => { console.log('SHOP component state has been rendered or re-rendered') });
 
-    const getProductData = async () => {
-        let response = await axios.get('http://127.0.0.1:5000/auth/products');
-        return response.status === 200 ? response.data : null
+  const getProductData = async () => {
+    let response = await axios.get('http://127.0.0.1:5000/auth/products');
+    return response.status === 200 ? response.data : null
 
-    }
+  }
 
-    const loadProductData = async () => {
-        let data = await getProductData();
-        setProducts(data.products);
+  const loadProductData = async () => {
+    let data = await getProductData();
+    setProducts(data.products);
 
-    }
+  }
 
-    const [products, setProducts] = useState(() => loadProductData())
+  const [products, setProducts] = useState(() => loadProductData())
 
-    return (
-        <>
-    
-        <div>
-            <h1></h1>
-        </div>
-        <div className="container m-auto">
-            <div className="row">
-            {products && products.length ? products.map((p, index) => {
-            return <Card key={index} id={p.id} sx={{ maxWidth: 345 }}>
-                 <CardMedia
-        sx={{ height: 140 }}
-        image={p.prod_image}
-        title={p.food_name}
-      />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div"> {p.food_name}</Typography>
-              <Typography variant="body2" color="text.secondary">
-               Contains: {p.allergens}
-               <br />
-               ${p.price}0 
-               <br />
-                {p.size}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Share</Button>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-            })
+  return (
+    <>
+      <div className="prod_container">
+        <div className="row">
+          {products && products.length ? products.map((p, index) => {
+            return <Card key={index} id={p.id} style={{ width: '18rem' }}>
+              <Card.Title>{p.food_name}</Card.Title>
+              <Card.Body>
+                <Card.Img variant="top" src={p.prod_image} />
+                <ListGroup className="list-group-flush">
+                  <ListGroup.Item>Contains: {p.allergens}</ListGroup.Item>
+                  <hr />
+                  <ListGroup.Item>Price: ${p.price}0</ListGroup.Item>
+                </ListGroup>
+                <Button variant="primary">Order</Button>
+              </Card.Body>
+            </Card>
+          })
+        
+
+
             :
-            <h1>Loading Please be Patient...</h1>
-        }
-          </div>
-          </div>
+            <div className="load">
+        
+          <h1>Loading Please be Patient...<Spinner animation="border" variant="primary"/></h1>
+        
+        </div>
+}
+        </div>
+
+      </div>
 
 
+    </>
 
-
-
-          </>
-
-    )
+  )
 };
 
 export default Order;
