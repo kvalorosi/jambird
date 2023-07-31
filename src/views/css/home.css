@@ -14,8 +14,9 @@ body {
   font-family: 'Courier New', Courier, monospace;
   }
   .logo {
-    background-image: url('images/white_logo Large.jpeg');
-    background-size: cover;
+    background-image: url('images/white_logo.png');
+    background-size: contain;
+    
 
 
   }
@@ -45,4 +46,24 @@ body {
     justify-content: center;
     
   }
+
+  .prod_container {
+    font-family: 'Monaco', Courier, monospace;
+
+  }
+
+  h2 {
+    font-family: 'Borel', cursive; 
+    
+  }
+
+  .box {
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Monaco', Courier, monospace;
+
+
+  }
+
   

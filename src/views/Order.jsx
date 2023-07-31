@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
+import '../views/css/home.css';
 
 
 

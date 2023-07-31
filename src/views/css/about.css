@@ -1,9 +1,25 @@
 .card-custom {
     background-color: #6ac1ea;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Monaco', Courier, monospace;
     font-size: large;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 20px;
+}
+
+.content-container {
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Borel', cursive;
+    font-weight: bold;
+
+}
+
+.logo-container {
+    font-family: 'Borel', cursive;
+    font-weight: bold;
+    display: flex;
+    margin: 0 auto;
+    padding-left: 75px;
 }
