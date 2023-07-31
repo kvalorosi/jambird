@@ -5,6 +5,10 @@ import Card from 'react-bootstrap/Card';
 import { ListGroup } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import '../views/css/home.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+
 
 
 
@@ -36,6 +40,7 @@ const Order = () => {
                 <Card.Img variant="top" src={p.prod_image} />
                 <ListGroup className="list-group-flush">
                   <ListGroup.Item>Contains: {p.allergens}</ListGroup.Item>
+                  <span><i id="wheat" className="fa-solid fa-wheat-awn-circle-exclamation" /></span>
                   <hr />
                   <ListGroup.Item>Price: ${p.price}0</ListGroup.Item>
                 </ListGroup>
