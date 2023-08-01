@@ -49,7 +49,7 @@ const Home = () => {
             </div>
             <br />
             
-            <h2><i>Jam Bird is live and ready to go for a ride!</i></h2>
+            <h2><i>Jambird is live and ready to go for a ride!</i></h2>
             <div className='box'>
             <Link className="btn btn-info" to="/about">Click Here To Learn More</Link>
             </div>

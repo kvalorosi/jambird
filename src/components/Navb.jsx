@@ -10,7 +10,7 @@ const Navb = () => {
     return (
         <Navbar style={{ backgroundColor: "#e6f7ff" }} >
           <div className="m-auto">
-          <h2>Jam Bird</h2>
+          <h2>Jambird</h2>
           </div>
         <Container>
         <Navbar.Brand className="home" href="#home"></Navbar.Brand>
@@ -18,7 +18,8 @@ const Navb = () => {
           <Link className="navbar-brand" to="/">Home</Link>
             <Link className="navbar-brand" to="/order">Order Here!</Link>
             <Link className="navbar-brand" to='/events'>Events</Link>
-            <Link className="navbar-brand" to="/about">About jam bird</Link>
+            <Link className="navbar-brand" to="/about">About jambird</Link>
+            <Link className="navbar-brand" to="/cart">Cart</Link>
       
           </Nav>
         </Container>

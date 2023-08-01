@@ -8,6 +8,7 @@ import Order from './views/Order'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './views/About'
 import Events from './views/Events'
+import Cart from './views/Cart'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Route children path='/order' element={<Order />} />
     <Route children path='/about' element={<About />} />
     <Route children path='/events' element={<Events />} />
+    <Route children path='/cart' element={<Cart />} />
 
     </Routes>
 
