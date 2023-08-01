@@ -25,14 +25,19 @@ const Order = () => {
 
   }
 
-  const [products, setProducts] = useState(() => loadProductData())
+  const [products, setProducts] = useState(() => loadProductData());
+
+  useEffect(() => {
+    loadProductData();
+  }, []);
+
 
   return (
     <>
       <div className="prod_container">
         <div className="row">
-          {products && products.length ? products.map((p, index) => {
-            return <Card key={index} id={p.id} style={{ width: '18rem' }}>
+      {products && products.length ? products.map((p, index) => {
+            return <Card border="success" key={index} id={p.id} style={{ width: '12rem' }}>
               <Card.Title>{p.food_name}</Card.Title>
               <Card.Body>
                 <Card.Img variant="top" src={p.prod_image} />
@@ -47,28 +52,35 @@ const Order = () => {
                 <Button variant="primary">Order</Button>
               </Card.Body>
             </Card>
-          })
-        
+          }) 
 
 
-            :
+
+
+       :
             <div className="load">
-        
-          <h1>Loading Please be Patient...<Spinner animation="border" variant="primary"/></h1>
-        
-        </div>
-}
-        </div>
 
-      </div>
+              <h1>Loading Please be Patient...<Spinner animation="border" variant="primary" /></h1>
+
+            </div> 
+       } 
+       </div> 
+       </div>
+       <Card border="none" className="note" style={{ width: '30rem' }}>
+        <Card.Text>
+        Note- All dairy products are organic; all eggs are organic/non-gmo; all produce is organic and/or local when available; all flour & sugar is non-gmo. JamBird strives to use only high quality ingredients which result in a high quality baked good!
+
+        </Card.Text>
+      </Card>
+       
 
 
-    </>
+       </>
 
   )
 };
 
-export default Order;
+      export default Order;
 
 
 

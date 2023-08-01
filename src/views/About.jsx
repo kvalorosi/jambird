@@ -7,14 +7,16 @@ const About = () => {
   return (
     
     <>
-   <div className="bike-pic">
+    <div className="title-container text-center">
+   <h1>About Jam Bird</h1>
+   </div>
     <div className="content-container w-75 m-auto">
-   <Card className="card-custom" style={{ backgroundColor: "#e6f7ff"}}>
+   <Card border="success" className="card-custom" style={{ backgroundColor: "#e6f7ff"}}>
       <Card.Body>
 
-JamBird is live! And ready to go for a ride. This offering is all about cycling- everything is individually wrapped so you can easily throw it in a jersey pocket or pack.
+This offering is all about cycling- everything is individually wrapped so you can easily throw it in a jersey pocket or pack.
 
-All baked goods are made in a home kitchen and protected under the Colorado Cottage Act. Extensive sanitary practices are in place.  
+All baked goods are made in a home kitchen and protected under the Colorado Cottage Act.  
 
 Portable, packable, perfect pocket snacks. All vegetarian. Some sweet. Some savory.
 
@@ -22,16 +24,20 @@ After serving as a soigneiur on multiple occasions, I received incredible feedba
 
 I love to bake. I love to bike. Jambird marries the two together into a sharable offering that makes it as simple as pie to bring fresh baked goods on a bike ride. 
 Briana
-
-Note- All dairy products are organic; all eggs are organic/non-gmo; all produce is organic and/or local when available; all flour & sugar is non-gmo. JamBird strives to use only high quality ingredients which result in a high quality baked good!
-
 </Card.Body>
     </Card>
 </div>
+
+<div className="container">
+<Card>
+  <Card.Img variant="bottom" src="images/IMG_7280.jpeg" />
+</Card>
+
 </div>
- 
 
 </>
+
+
   
 
   )

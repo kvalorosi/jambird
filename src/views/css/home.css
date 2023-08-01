@@ -12,9 +12,9 @@ body {
 
 .logo {
   margin: 0 auto; 
-  background-image: url('images/white_logo.png');
+  /* background-image: url('images/white_logo.png');
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .bike-pic {
@@ -47,7 +47,8 @@ body {
 }
 
 .prod_container {
-  margin: 0 auto;
+  background-color: #6ac1ea;
+  margin-top: 30px;
   font-family: 'Monaco', Courier, monospace;
 
 }
@@ -62,4 +63,12 @@ h2 {
   justify-content: center;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
+}
+
+.note {
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+
+
 }
