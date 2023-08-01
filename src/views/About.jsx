@@ -1,20 +1,13 @@
 
 import '../views/css/about.css'
-import MailchimpForm from '../components/MailchimpForm';
-import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 
 
 const About = () => {
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = () => {
-    setSubscribed(true);
-  };
   return (
-    <div className="bike-pic">
-    <>
     
+    <>
+   <div className="bike-pic">
     <div className="content-container w-75 m-auto">
    <Card className="card-custom" style={{ backgroundColor: "#e6f7ff"}}>
       <Card.Body>
@@ -34,21 +27,12 @@ Note- All dairy products are organic; all eggs are organic/non-gmo; all produce 
 
 </Card.Body>
     </Card>
-    </div>
-    <div className='logo-container'>
-      <div className="logo-container m-auto">
-        {!subscribed && <MailchimpForm onSubscribe={handleSubscribe} />}
-      </div>
-      </div>
-      
+</div>
+</div>
+ 
 
-      
-
-
-
-
-    </>
-    </div>
+</>
+  
 
   )
 };

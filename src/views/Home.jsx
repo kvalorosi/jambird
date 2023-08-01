@@ -2,6 +2,7 @@ import Image from 'react-bootstrap/Image';
 import Carousel from 'react-bootstrap/Carousel';
 import '../views/css/home.css';
 import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 
 
@@ -10,6 +11,7 @@ const Home = () => {
     return (
 
         <>
+        
             <div className="logo">
                 <div className="hero-container">
                     <Carousel>
@@ -44,8 +46,9 @@ const Home = () => {
             
             <h2><i>Jam Bird is live and ready to go for a ride!</i></h2>
             <div className='box'>
-            <Button variant="info">Click Here To Learn More</Button>
+            <Link className="btn btn-info" to="/about">Click Here To Learn More</Link>
             </div>
+    
         </>
 
 

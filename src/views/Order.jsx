@@ -5,8 +5,6 @@ import Card from 'react-bootstrap/Card';
 import { ListGroup } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import '../views/css/home.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 
 
@@ -41,7 +39,9 @@ const Order = () => {
                 <ListGroup className="list-group-flush">
                   <ListGroup.Item>Contains: {p.allergens}</ListGroup.Item>
                   <span><i id="wheat" className="fa-solid fa-wheat-awn-circle-exclamation" /></span>
+                  <span><i id="dairycow" className="fa-solid fa-cow" /></span>
                   <hr />
+                  <ListGroup.Item>{p.size}</ListGroup.Item>
                   <ListGroup.Item>Price: ${p.price}0</ListGroup.Item>
                 </ListGroup>
                 <Button variant="primary">Order</Button>
