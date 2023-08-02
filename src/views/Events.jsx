@@ -16,8 +16,11 @@ const Events = () => {
         <div className='container  w-50 m-auto'>
         <h2>There are currently no events scheduled, by subscribing you will be the first to know when the next event is!</h2>
         </div>
+        <br />
+        <br />
+        <br />
         <div className='logo-container'>
-      <div className="logo-container m-auto">
+      <div className="logo-container">
         {!subscribed && <MailchimpForm onSubscribe={handleSubscribe} />}
       </div>
       </div>

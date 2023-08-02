@@ -9,11 +9,6 @@ const MailchimpForm = () => {
             <div id="mc_embed_signup_scroll">
               <h2>Click subscribe below for the lastest happenings at Jam bird!</h2>
               <p className="brandingLogo" style={{ margin: '0px auto' }}><img src="images/color_noback Small.jpeg"  /></p>
-              {/* <div className="indicates-required"><span className="asterisk">*</span> indicates required</div> */}
-              {/* <div className="mc-field-group">
-                <label htmlFor="mce-EMAIL">Email Address <span className="asterisk">*</span></label>
-                <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" />
-              </div> */}
               <div id="mce-responses" className="clear foot">
                 <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
                 <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>

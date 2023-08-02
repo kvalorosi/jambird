@@ -47,7 +47,6 @@ body {
 }
 
 .prod_container {
-  background-color: #6ac1ea;
   margin-top: 30px;
   font-family: 'Monaco', Courier, monospace;
 
@@ -69,6 +68,11 @@ h2 {
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  background-color: #6ac1ea;
 
 
 }
+
+
+
+

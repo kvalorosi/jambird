@@ -13,11 +13,11 @@ const Home = () => {
         
         <div className="logo">
                 <div className="hero-container">
-                    <Carousel style={{ backgroundColor: "#e6f7ff"}}>
+                    <Carousel style={{ width:'65rem'}}>
                     <Carousel.Item>
                             <img
-                                className="d-block w-75 m-auto"
-                                src="images/white_logo Large Medium.jpeg"
+                                className="d-block w-50 m-auto"
+                                src="images/color_noback Background Removed.png"
                                 alt="First slide" />
                         </Carousel.Item>
                         <Carousel.Item>
@@ -37,6 +37,18 @@ const Home = () => {
                                 className="d-block w-50 m-auto"
                                 src="images/IMG_6012.jpeg"
                                 alt="Fourth slide" />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-50 m-auto"
+                                src="images/IMG_8221.jpeg"
+                                alt="Fifth slide" />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-50 m-auto"
+                                src="images/best_banana.jpeg"
+                                alt="Sixth slide" />
                         </Carousel.Item>
                     </Carousel>
                     <br />

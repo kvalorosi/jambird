@@ -15,13 +15,12 @@ const Navb = () => {
         <Container>
         <Navbar.Brand className="home" href="#home"></Navbar.Brand>
           <Nav className="m-right">
-          <Link className="navbar-brand" to="/">Home</Link>
-            <Link className="navbar-brand" to="/order">Order Here!</Link>
-            <Link className="navbar-brand" to='/events'>Events</Link>
+          <Link className="navbar-brand" to="/">Home </Link>
+            <Link className="navbar-brand" to="/order">Order Here! </Link>
+            <Link className="navbar-brand" to='/events'>Events </Link>
             <Link className="navbar-brand" to="/about">About jambird</Link>
             <Link className="navbar-brand" to="/cart">Cart</Link>
-      
-          </Nav>
+            </Nav>
         </Container>
       </Navbar>
   )

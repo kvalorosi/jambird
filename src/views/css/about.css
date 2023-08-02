@@ -1,3 +1,8 @@
+body {
+    background-image: url("https://preview.redd.it/i-created-a-subtle-background-with-the-aromantic-colors-v0-spdefm8p5no81.png?auto=webp&s=01bd7977574dcb45cd55b5427bcba62fdbedf75f");
+    background-size: cover;
+}  
+
 .card-custom {
     justify-content: center;
     background-color: #6ac1ea;
@@ -9,7 +14,7 @@
 }
 
 .logo-container {
-    font-family: 'Borel', cursive;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     display: flex;
     margin: 0 auto;
@@ -18,7 +23,7 @@
 
 h1 {
     margin: 0 auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 } 
 
 .title-container {
