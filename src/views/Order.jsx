@@ -2,19 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Row } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import '../views/css/home.css';
 import { DataContext } from "../context/DataProvider";
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
-
-
-
-
-
 
 
 const Order = () => {
@@ -57,10 +48,15 @@ const Order = () => {
 
   return (
     <>
+    
+    <br />
+    <br />
+    {/* <Card className="top" style={{ backgroundColor: '#6ac1ea', padding: '20px 20px 20px 20px' }}>
+      <Card.Text>All baked goods are made in a home kitchen and protected under the Colorado Cottage Act.Portable, packable, perfect pocket snacks. All vegetarian. Some sweet. Some savory.</Card.Text>
+      </Card> */}
       <div className="prod_container" style={{ padding: '40px 40px 20px 40px' }}>
-        <div className="row">
-
-          {products && products.length ? products.map((p, index) => {
+        <Row>
+         {products && products.length ? products.map((p, index) => {
             return <Card border="success" key={index} id={p.id} style={{ width: '12rem', backgroundColor: "#e6f7ff" }}>
               <br />
               <Card.Title>{p.food_name}</Card.Title>
@@ -84,28 +80,24 @@ const Order = () => {
               </Card.Body>
             </Card>
           })
-        
-
-            :
+          :
             <div className="load">
 
               <h1>Loading Please be Patient...<Spinner animation="border" variant="primary" /></h1>
 
             </div>
           }
+          </Row>
         </div>
+        <Card border="none" className="note" style={{ backgroundColor: '#6ac1ea', padding: '20px 20px 20px 20px' }}>
+<Card.Text>
+  NOTE - All dairy products are organic; all eggs are organic/non-gmo; all produce is organic and/or local when available; all flour & sugar is non-gmo. JamBird strives to use only high quality ingredients which result in a high quality baked good!
+</Card.Text>
+</Card>
 
 
-        <Card border="none" className="note" style={{ backgroundColor: "#e6f7ff", width: '50rem', padding: '20px 20px 20px 20px' }}>
-          <Card.Text>
-            NOTE - All dairy products are organic; all eggs are organic/non-gmo; all produce is organic and/or local when available; all flour & sugar is non-gmo. JamBird strives to use only high quality ingredients which result in a high quality baked good!
-          </Card.Text>
-        </Card>
 
-      </div>
-
-
-    </>
+</>
 
   )
 };

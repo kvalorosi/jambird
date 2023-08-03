@@ -47,8 +47,12 @@ body {
 }
 
 .prod_container {
-  margin-top: 30px;
-  font-family: 'Monaco', Courier, monospace;
+  display: grid;
+  margin: 0 auto;
+  gap: 3px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 300px;
+
 
 }
 
@@ -65,11 +69,20 @@ h2 {
 }
 
 .note {
-  margin-top: 20px;
+  float: right;
+  right: 100px;
+  width: 500px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  background-color: #6ac1ea;
 
+}
+
+.top {
+  float: right;
+  right: 100px;
+  width: 500px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 
 }
 
