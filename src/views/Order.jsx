@@ -6,11 +6,15 @@ import { ListGroup, Row } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import '../views/css/home.css';
 import { DataContext } from "../context/DataProvider";
+import { useDatabase, useUser } from "reactfire";
 
 
 const Order = () => {
   useEffect(() => { console.log('SHOP component state has been rendered or re-rendered') });
 
+
+  const database = useDatabase();
+  const { data:user } = useUser();
 
   const getProductData = async () => {
     let response = await axios.get('http://127.0.0.1:5000/auth/products');
@@ -36,7 +40,9 @@ const Order = () => {
       newCart.products[products.id].quantity++
       :
       newCart.products[products.id] = { data: products, quatity: 1 };
-    console.log(newCart)
+    
+      set(ref(db, 'carts/' + user.uid), copyCart);
+
     setCart(newCart);
 
   }

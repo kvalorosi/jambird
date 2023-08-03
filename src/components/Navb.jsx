@@ -19,9 +19,14 @@ const Navb = () => {
     let provider = new GoogleAuthProvider();
     let u = await signInWithPopup(auth, provider);
     console.log(u);
-    return u
+  }
+ 
+  const signout = async () => {
+    await signOut(auth).then(() => console.log('signed out'));
 
   }
+
+  
 
   
     return (
@@ -33,11 +38,21 @@ const Navb = () => {
         <Navbar.Brand className="home" href="#home"></Navbar.Brand>
           <Nav className="m-right">
           <Link className="navbar-brand" to="/">Home </Link>
-            <Link className="navbar-brand" to="/order">Order Here! </Link>
-            <Link className="navbar-brand" to='/events'>Events </Link>
-            <Link className="navbar-brand" to="/about">About jambird</Link>
-            <Link className="navbar-brand" to="/cart">Cart</Link>
-            <Button variant="info" onClick={signin}> Log in</Button>
+          <Link className="navbar-brand" to="/order">Order Here! </Link>
+          <Link className="navbar-brand" to='/events'>Events </Link>
+          <Link className="navbar-brand" to="/about">About jambird</Link>
+          <Link className="navbar-brand" to="/cart"><span><i id="cart" className='fa-solid fa-cart-shopping' /></span></Link>
+          {
+            signinStatus === 'loading'?
+            <Button variant='info' disabled>Loading..</Button>:
+            user ? 
+            <>
+            <span>{user.displayName}</span>
+            
+            <Button variant="info" onClick={signout}> Log Out</Button>
+            </> :
+             <Button variant="info" onClick={signin}> Log in</Button>
+          }
             </Nav>
         </Container>
       </Navbar>
