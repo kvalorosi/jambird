@@ -16,19 +16,19 @@ const Cart = () => {
 
   const addProduct = (id) => {
     let copyCart = { ...cart };
-    copyCart.size++;
+    copyCart.size ++;
     copyCart.total += parseFloat(copyCart.products[id].data.price);
-    copyCart.products[id].quantity++;
+    copyCart.products[id].quantity ++;
     setCart(copyCart);
   };
 
   const decreaseProduct = (id) => {
     let copyCart = { ...cart };
-    copyCart.size--;
+    copyCart.size --;
     copyCart.total -= parseFloat(copyCart.products[id].data.price);
-    copyCart.products[id].quantity > 1
-      ? (copyCart.products[id].quantity--)
-      : delete copyCart.products[id];
+    copyCart.products[id].quantity > 1 ? 
+    copyCart.products[id].quantity -- :
+    delete copyCart.products[id];
 
     setCart(copyCart);
   };
@@ -55,12 +55,13 @@ const Cart = () => {
                   <Card.Img className="item-img" variant="top" src={pro.data.prod_image} />
                 </div>
                 <hr />
-                <Card.Text>
+                
                   <p>${pro.data.price}0</p>
                   <hr />
                   <Button variant="info" onClick={() => decreaseProduct(pro.data.id)}> -1 </Button>
                   <p>Item Total: {pro.quantity}</p>
                   <Button variant="info" onClick={() => addProduct(pro.data.id)}> +1 </Button>
+                  <Card.Text>
                 </Card.Text>
                 <Button variant="warning" onClick={() => removeProduct(pro.data.id)}>Remove from cart</Button>
                 <hr />
