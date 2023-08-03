@@ -3,6 +3,7 @@ import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import { Button } from "react-bootstrap";
+import '../views/css/cart.css'
 
 
 const Cart = () => {
@@ -44,7 +45,8 @@ const Cart = () => {
   return (
     <>
       <div className="Container">
-        <h1>These are the items in your cart:</h1>
+        <h2>Heres your order! One step closer to hitting the trail! <span><i id="bike" className="fa-solid fa-bicycle" /></span></h2>
+        
         <hr />
         {Object.values(cart.products).map((pro, ind) => {
           return (

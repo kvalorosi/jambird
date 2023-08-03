@@ -32,7 +32,7 @@ const Navb = () => {
     return (
         <Navbar style={{ backgroundColor: "#e6f7ff" }} >
           <div className="m-auto">
-          <h2>Jambird</h2>
+          <h2>Jambird<span><i id="bike" className="fa-solid fa-crow" /></span></h2>
           </div>
         <Container>
         <Navbar.Brand className="home" href="#home"></Navbar.Brand>
