@@ -18,7 +18,7 @@ const Order = () => {
   const { data: user } = useUser();
 
   const getProductData = async () => {
-    let response = await axios.get('http://127.0.0.1:5000/auth/products');
+    let response = await axios.get('https://jambird.onrender.com/auth/products');
     return response.status === 200 ? response.data : null
 
   }
